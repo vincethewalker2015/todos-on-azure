@@ -7,20 +7,23 @@
         <p>
           <%= link_to "Create a To Do", new_todo_path, class: "btn btn-success" %>
         </p>
-          <table class="row">
-            <tr>
+          <table class="table">
+            <thead>
+              <tr>
               <th>Name</th>
-              
               <th>Description</th>
             </tr>
+            </thead>
             <% @todos.each do |todo| %>
-              <tr class ="well profile-black-white-thin row <%= cycle('profile-black-white-thin-b', '') %>"> 
-                <td class="texties"><%= todo.name %></td>
-                <td class="texties"><%= todo.description %></td>
-                <td><%= link_to "Edit", edit_todo_path(todo), class: "btn btn-warning bttn" %></td>
-                <td><%= link_to "View", todo_path(todo), class: "btn btn-info bttn" %></td>
-                <td><%= link_to "Delete", todo_path(todo), method: :delete, data: {confirm: "Are you sure??"}, class: "btn btn-danger bttn" %></td>
-            </tr>
+              <tbody>
+                <tr class ="well profile-black-white-thin row <%= cycle('profile-black-white-thin-b', '') %>"> 
+                  <td class="texties"><%= todo.name %></td>
+                  <td class="texties"><%= todo.description %></td>
+                  <td><%= link_to "Edit", edit_todo_path(todo), class: "btn btn-warning bttn" %></td>
+                  <td><%= link_to "View", todo_path(todo), class: "btn btn-info bttn" %></td>
+                  <td><%= link_to "Delete", todo_path(todo), method: :delete, data: {confirm: "Are you sure??"}, class: "btn btn-danger bttn" %></td>
+                </tr>
+              </tbody>
           <% end %>
         </table>
     </div>
