@@ -32,3 +32,9 @@ local:
 #   service: Mirror
 #   primary: local
 #   mirrors: [ amazon, google, microsoft ]
+
+azure:
+  DB_Host="postgresql-todos.postgres.database.azure.com"
+  DB_DATABASE="postgresql-todos"
+  DB_USERNAME="vincent_walker@postgresql-todos"
+  DB_PASSWORD="Vinny#1961"

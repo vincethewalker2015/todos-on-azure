@@ -84,3 +84,5 @@ production:
   database: <%= ENV['DB_DATABASE'] %>
   username: <%= ENV['DB_USERNAME'] %>
   password: <%= ENV['DB_PASSWORD'] %>
+  # username: "vincent_walker@postgresql-todos"
+  # password: "Vinny#1961"
